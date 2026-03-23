@@ -1,0 +1,32 @@
+{
+  "name": "cosmetic-checker-backend",
+  "version": "1.0.0",
+  "description": "Mastra AI agent for EU cosmetics regulation compliance checking",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "tsx src/tests/test-cases.ts",
+    "test:engine": "tsx src/tests/engine.test.ts",
+    "test:integration": "tsx src/tests/integration.test.ts",
+    "extract-rules": "tsx src/extractor/index.ts",
+    "check": "tsx src/scripts/check.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "latest",
+    "@mastra/core": "latest",
+    "ai": "^6.0.138",
+"cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
